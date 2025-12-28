@@ -1,0 +1,46 @@
+{
+    "2025": {
+        "vestibular_name": "Vestibular Unificado UFSC/IFSC/IFC/2025",
+        "genres": [
+            "manifesto",
+            "textão",
+            "resenha"
+        ],
+        "fonte": "https://dados.coperve.ufsc.br/vestibular2025/relatorio/RV_0038_pt2_rpt.pdf",
+        "verificado": true,
+        "nota": "Dados extraídos diretamente do relatório oficial da COPERVE"
+    },
+    "2024": {
+        "vestibular_name": "Vestibular Unificado UFSC/IFSC/IFC/2024",
+        "genres": [
+            "relato de memória",
+            "carta",
+            "crônica"
+        ],
+        "fonte": "https://dados.coperve.ufsc.br/vestibular2024/relatorio/RV_0038_pt2_rpt.pdf",
+        "verificado": true,
+        "nota": "Dados extraídos diretamente do relatório oficial da COPERVE"
+    },
+    "2023": {
+        "vestibular_name": "Vestibular Unificado UFSC/IFSC/IFC/2023",
+        "genres": [
+            "carta",
+            "manifesto",
+            "crônica"
+        ],
+        "fonte": "https://vestibular2023.paginas.ufsc.br/files/2023/07/VEST-REL-2023.pdf",
+        "verificado": true,
+        "nota": "Dados extraídos diretamente do relatório oficial da COPERVE"
+    },
+    "2013": {
+        "vestibular_name": "Vestibular UFSC/2013",
+        "genres": [
+            "artigo",
+            "resenha",
+            "dissertação"
+        ],
+        "fonte": "https://antiga.coperve.ufsc.br/vestibular2013/relatorioOficial/RED.pdf",
+        "verificado": true,
+        "nota": "Dados extraídos diretamente do relatório oficial da COPERVE"
+    }
+}
