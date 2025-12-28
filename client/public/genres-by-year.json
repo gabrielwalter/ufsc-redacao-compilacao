@@ -2,26 +2,26 @@
   "2009": {
     "year": 2009,
     "vestibular": "Vestibular UFSC",
-    "genres": ["texto dissertativo", "texto narrativo", "carta"],
+    "genres": ["dissertação", "carta", "narração"],
     "source_type": "prova",
     "url": "http://www.coperve.ufsc.br/provas_ant/2009-1-amarela.pdf",
-    "notes": "Apenas prova disponível. Propostas: texto dissertativo, texto narrativo, carta."
+    "notes": "Apenas prova disponível."
   },
   "2010": {
     "year": 2010,
     "vestibular": "Vestibular UFSC",
-    "genres": ["dissertação", "notícia de jornal", "crônica", "conto"],
+    "genres": ["dissertação", "crônica", "conto", "notícia de jornal"],
     "source_type": "prova",
     "url": "http://www.coperve.ufsc.br/provas_ant/2010-3.pdf",
-    "notes": "Apenas prova disponível. Propostas: dissertação, notícia de jornal, crônica, conto."
+    "notes": "Apenas prova disponível."
   },
   "2011": {
     "year": 2011,
     "vestibular": "Vestibular UFSC",
-    "genres": ["carta", "crônica", "conto", "dissertação"],
+    "genres": ["dissertação", "crônica", "carta","conto"],
     "source_type": "prova",
     "url": "http://www.coperve.ufsc.br/provas_ant/2011-3.pdf",
-    "notes": "Apenas prova disponível. Propostas: carta, crônica, conto, dissertação."
+    "notes": "Apenas prova disponível."
   },
   "2012": {
     "year": 2012,
@@ -29,15 +29,15 @@
     "genres": ["dissertação", "narração", "narração"],
     "source_type": "prova",
     "url": "http://www.coperve.ufsc.br/provas_ant/2012-3.pdf",
-    "notes": "Apenas prova disponível. Três propostas: dissertação e 2× narração."
+    "notes": "Apenas prova disponível. Propostas: dissertação e 2× narração, sendo uma relativa ao desfecho de obra literária e outra a um episódio marcante da vida do candidato a partir do elo com obra literária (ambas contidas nas leituras obrigatórias para a prova de Lingua Portuguesa e Literatura desse ano)."
   },
   "2013": {
     "year": 2013,
     "vestibular": "Vestibular UFSC",
-    "genres": ["artigo de opinião", "resenha", "dissertação"],
+    "genres": ["dissertação", "resenha", "artigo de opinião"],
     "source_type": "análise_banca",
     "url": "https://antiga.coperve.ufsc.br/vestibular2013/relatorioOficial/RED.pdf",
-    "notes": "Análise da banca disponível. Três propostas: artigo de opinião, resenha, dissertação."
+    "notes": "Análise da banca disponível."
   },
   "2014": {
     "year": 2014,
@@ -45,7 +45,7 @@
     "genres": ["dissertação", "narração", "relato"],
     "source_type": "análise_banca",
     "url": "https://antiga.coperve.ufsc.br/vestibular2014/relatorioOficial/RED.pdf",
-    "notes": "Análise da banca disponível. Propostas: dissertação, narração, relato."
+    "notes": "Análise da banca disponível."
   },
   "2015": {
     "year": 2015,
@@ -53,15 +53,15 @@
     "genres": ["dissertação", "crônica"],
     "source_type": "análise_banca",
     "url": "https://dados.coperve.ufsc.br/vestibular2015/relatorioOficial/RED.pdf",
-    "notes": "Análise da banca disponível. Duas propostas: dissertação e crônica."
+    "notes": "Análise da banca disponível."
   },
   "2016": {
     "year": 2016,
     "vestibular": "Vestibular UFSC",
-    "genres": ["lenda", "dissertação", "crônica"],
+    "genres": ["dissertação", "crônica", "lenda"],
     "source_type": "análise_banca",
     "url": "https://dados.coperve.ufsc.br/vestibular2016/relatorioOficial/RED.pdf",
-    "notes": "Análise da banca disponível. Propostas: lenda, dissertação, crônica."
+    "notes": "Análise da banca disponível."
   },
   "2017": {
     "year": 2017,
@@ -69,7 +69,7 @@
     "genres": ["dissertação", "crônica"],
     "source_type": "análise_banca",
     "url": "https://dados.coperve.ufsc.br/vestibular2017/relatorioOficial/RED.pdf",
-    "notes": "Análise da banca disponível. Duas propostas: dissertação e crônica."
+    "notes": "Análise da banca disponível."
   },
   "2018": {
     "year": 2018,
@@ -77,47 +77,47 @@
     "genres": ["dissertação", "crônica"],
     "source_type": "análise_banca",
     "url": "https://dados.coperve.ufsc.br/vestibular2018/relatorioOficial/RDC.pdf",
-    "notes": "Análise da banca disponível. Duas propostas: dissertação e crônica."
+    "notes": "Análise da banca disponível."
   },
   "2019": {
     "year": 2019,
     "vestibular": "Vestibular UFSC",
-    "genres": ["conto", "dissertação", "carta"],
+    "genres": ["dissertação", "carta", "conto"],
     "source_type": "análise_banca",
     "url": "https://dados.coperve.ufsc.br/vestibular2019/relatorioOficial/RED.pdf",
-    "notes": "Análise da banca disponível. Propostas: conto, dissertação, carta."
+    "notes": "Análise da banca disponível."
   },
   "2020": {
     "year": 2020,
     "vestibular": "Vestibular Unificado UFSC/UFFS",
-    "genres": ["textão", "conto", "dissertação"],
+    "genres": ["dissertação", "conto", "textão"],
     "source_type": "prova",
     "url": "http://dados.coperve.ufsc.br/vestibular2020/gabaritos/definitivo/prova3/p3-marfim.pdf",
-    "notes": "Apenas prova disponível. Propostas: textão, conto, dissertação."
+    "notes": "Apenas prova disponível."
   },
   "2022": {
     "year": 2022,
     "vestibular": "Vestibular UFSC",
-    "genres": ["manifesto", "carta do leitor", "dissertação"],
+    "genres": ["dissertação", "carta", "manifesto"],
     "source_type": "prova",
     "url": "http://dados.coperve.ufsc.br/vestibular2022/gabaritos/definitivos/prova2/p2-amarela.pdf",
-    "notes": "Apenas prova disponível. Propostas: manifesto, carta do leitor, dissertação."
+    "notes": "Apenas prova disponível. O tipo de carta solicitada foi especificado como Carta do Leitor, enquanto gênero textual."
   },
   "2023": {
     "year": 2023,
     "vestibular": "Vestibular Unificado UFSC/IFSC/IFC",
-    "genres": ["carta", "manifesto", "crônica"],
+    "genres": ["crônica", "carta", "manifesto"],
     "source_type": "análise_banca",
     "url": "https://vestibular2023.paginas.ufsc.br/files/2023/07/VEST-REL-2023.pdf",
-    "notes": "Análise da banca disponível. Propostas: carta, manifesto, crônica."
+    "notes": "Análise da banca disponível."
   },
   "2024": {
     "year": 2024,
     "vestibular": "Vestibular Unificado UFSC/IFSC/IFC",
-    "genres": ["relato de memória", "carta", "crônica"],
+    "genres": ["crônica", "carta", "relato"],
     "source_type": "análise_banca",
     "url": "https://dados.coperve.ufsc.br/vestibular2024/relatorio/RV_0038_pt2_rpt.pdf",
-    "notes": "Análise da banca disponível. Propostas: relato de memória, carta, crônica."
+    "notes": "Análise da banca disponível."
   },
   "2025": {
     "year": 2025,
@@ -125,6 +125,14 @@
     "genres": ["manifesto", "textão", "resenha"],
     "source_type": "análise_banca",
     "url": "https://dados.coperve.ufsc.br/vestibular2025/relatorio/RV_0038_pt2_rpt.pdf",
-    "notes": "Análise da banca disponível. Propostas: manifesto, textão, resenha."
+    "notes": "Análise da banca disponível."
+  },
+   "2026": {
+    "year": 2026,
+    "vestibular": "Vestibular Unificado UFSC/IFSC/IFC",
+    "genres": ["crônica", "carta", "manifesto"],
+    "source_type": "prova",
+    "url": "https://vestibularunificado2026.ufsc.br/files/2014/12/p2_amarela.pdf",
+    "notes": "Apenas prova disponível."
   }
 }

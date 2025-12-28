@@ -8,22 +8,6 @@ import { ArrowLeft, ExternalLink, Loader2, Calendar } from "lucide-react";
 import { useLocation } from "wouter";
 import { PieChart, Pie, Cell, Legend, Tooltip, ResponsiveContainer } from "recharts";
 
-interface GenreAnalysis {
-  ano: number;
-  fonte: string;
-}
-
-interface GenreData {
-  frequencia: number;
-  analises: GenreAnalysis[];
-}
-
-interface RedacaoData {
-  generos: Record<string, GenreData>;
-  fonte_dados: string;
-  nota: string;
-}
-
 interface YearGenreData {
   year: number;
   vestibular: string;
@@ -36,7 +20,6 @@ interface YearGenreData {
 
 export default function Dashboard() {
   const [, navigate] = useLocation();
-  const [data, setData] = useState<RedacaoData | null>(null);
   const [yearData, setYearData] = useState<Record<string, YearGenreData> | null>(null);
   const [loading, setLoading] = useState(true);
   const [chartData, setChartData] = useState<Array<{ name: string; value: number; years: number[] }>>([]);
@@ -56,13 +39,8 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const [genreResponse, yearResponse] = await Promise.all([
-          fetch("/redacao-data.json"),
-          fetch("/genres-by-year.json")
-        ]);
-        const jsonData: RedacaoData = await genreResponse.json();
+        const yearResponse = await fetch("/genres-by-year.json");
         const yearJsonData: Record<string, YearGenreData> = await yearResponse.json();
-        setData(jsonData);
         setYearData(yearJsonData);
 
         // Calcular frequência de gêneros em todo o período
@@ -87,7 +65,20 @@ export default function Dashboard() {
             value: data.count,
             years: data.years.sort((a, b) => a - b)
           }))
-          .sort((a, b) => b.value - a.value);
+          .sort((a, b) => {
+            // Critério 1: Ordena por frequência (maior → menor)
+            if (b.value !== a.value) {
+              return b.value - a.value;
+            }
+            
+            // Critério 2 (desempate): Se a frequência é igual, ordena pelo ano mais recente
+            // Math.max() encontra o ano mais recente de cada gênero
+            const anoMaisRecenteA = Math.max(...a.years);
+            const anoMaisRecenteB = Math.max(...b.years);
+            
+            // Retorna a diferença: ano mais recente vem primeiro (ordem decrescente)
+            return anoMaisRecenteB - anoMaisRecenteA;
+          });
 
         setChartData(chartDataArray);
       } catch (error) {
@@ -108,7 +99,7 @@ export default function Dashboard() {
     );
   }
 
-  if (!data || !yearData) {
+  if (!yearData) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <p>Erro ao carregar dados</p>
@@ -132,11 +123,9 @@ export default function Dashboard() {
             Voltar
           </Button>
           <h1 className="text-4xl font-bold text-slate-900 mb-2">
-            Análise de Redação UFSC
+            Desvendando a Redação na UFSC
           </h1>
-          <p className="text-slate-600">
-            Gêneros discursivos cobrados no Vestibular UFSC (2009-2025)
-          </p>
+         
         </div>
 
         {/* Tabs */}
@@ -150,9 +139,9 @@ export default function Dashboard() {
           <TabsContent value="por-genero" className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle>Frequência de Gêneros (2009-2025)</CardTitle>
+                <CardTitle>Frequência de Gêneros</CardTitle>
                 <CardDescription>
-                  Distribuição dos gêneros discursivos solicitados em todo o período
+                  Distribuição dos gêneros discursivos solicitados entre a edição de 2009 e a de 2026:
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex justify-center">
@@ -173,7 +162,7 @@ export default function Dashboard() {
                           <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
                         ))}
                       </Pie>
-                      <Tooltip formatter={(value) => `${value} edições`} />
+                      <Tooltip formatter={(value) => `${value} ${value === 1 ? 'edição' : 'edições'}`} />
                       <Legend />
                     </PieChart>
                   </ResponsiveContainer>
@@ -186,7 +175,7 @@ export default function Dashboard() {
             {/* Tabela de frequências */}
             <Card>
               <CardHeader>
-                <CardTitle>Ranking de Gêneros</CardTitle>
+                <CardTitle>Ranking de gêneros</CardTitle>
                 <CardDescription>
                   Quantas vezes cada gênero foi solicitado
                 </CardDescription>
@@ -203,7 +192,15 @@ export default function Dashboard() {
                         <span className="font-semibold text-slate-900">{item.name}</span>
                       </div>
                       <Badge variant="secondary">
-                        {item.value} edições ({item.years.join(", ")})
+                        {item.value} {item.value === 1 ? 'edição' : 'edições'} ({item.years.map((year, index) => {
+                          // Conta quantas vezes esse gênero específico apareceu nesse ano
+                          const count = yearData?.[year]?.genres.filter(
+                            (g) => g.toLowerCase() === item.name.toLowerCase()
+                          ).length || 1;
+                          
+                          const yearText = `${year}${count > 1 ? ` (${count}×)` : ''}`;
+                          return index < item.years.length - 1 ? `${yearText}, ` : yearText;
+                        }).join('')})
                       </Badge>
                     </div>
                   ))}
@@ -218,7 +215,7 @@ export default function Dashboard() {
               <CardHeader>
                 <CardTitle>Edições do Vestibular</CardTitle>
                 <CardDescription>
-                  Gêneros solicitados em cada edição (2009-2025)
+                  Gêneros solicitados em cada edição (2009-2026):
                 </CardDescription>
               </CardHeader>
               <CardContent>
