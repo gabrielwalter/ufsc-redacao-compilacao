@@ -25,7 +25,7 @@ Como interpretar os resultados:
 - Use os gráficos e as descrições para conhecer os padrões que tendem a aparecer em redações da UFSC — pense nisso como material de estudo e referência, não como avaliação ou nota.
 - Não existe funcionalidade para enviar sua redação ao sistema; os exemplos e métricas são extraídos do corpus interno do projeto.
 
-> **Importante:** o sistema está em **fase de testes** — os resultados são indicativos e podem mudar conforme refinamos os métodos. Esta ferramenta **não tem qualquer vínculo com a UFSC**.
+> **Importante:** o sistema está em **fase de testes** e **não tem qualquer vínculo com a UFSC**.
 
 ### 📚 Dados e fontes
 
