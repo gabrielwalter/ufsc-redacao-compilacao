@@ -122,7 +122,7 @@ pnpm run deploy
 
 Este comando automaticamente:
 1. 🔨 Faz build do projeto
-2. 📦 Copia os arquivos compilados para o repositório `site-gabrielhando/ufsc-redacao/`
+2. 📦 Copia os arquivos compilados para o repositório `site-gabrielhando/ufsc-redacao-compilacao/`
 3. 📤 Faz commit e push para o GitHub
 4. ✅ Aguarde alguns minutos para a Hostinger atualizar
 
