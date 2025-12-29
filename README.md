@@ -1,4 +1,4 @@
-# ufsc-redacao-analysis
+# ufsc-redacao-compilacao
 
 [![status: experimental](https://img.shields.io/badge/status-testing-yellow)](https://github.com/gabrielwalter/ufsc-redacao-analysis) [![license: MIT](https://img.shields.io/badge/license-MIT-blue)](LICENSE)
 
