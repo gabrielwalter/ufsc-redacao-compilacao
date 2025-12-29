@@ -80,6 +80,7 @@ Isso irá instalar dependências para todo o projeto.
 - `pnpm preview` — preview da build do Vite.
 - `pnpm check` — checa tipos com `tsc --noEmit`.
 - `pnpm format` — formata o código com Prettier.
+- `pnpm deploy` — faz build e deploy automático para o site (copia arquivos para repositório `site-gabrielhando` e faz push).
 
 Observação: para rodar o servidor em modo dev sem build, você pode usar o `tsx` se quiser:
 
@@ -105,9 +106,27 @@ pnpm exec tsx server/index.ts
 
 ## Build & Deploy
 
+### Build local
+
 1. `pnpm build`
 2. Após o build, o servidor fica bundlado em `dist/` (arquivo de entrada `dist/index.js`).
 3. Rodar em produção: `pnpm start` (ou `NODE_ENV=production node dist/index.js`).
+
+### Deploy automático para produção
+
+Para fazer deploy da aplicação no site (gabrielhando.com/ufsc-redacao):
+
+```bash
+pnpm run deploy
+```
+
+Este comando automaticamente:
+1. 🔨 Faz build do projeto
+2. 📦 Copia os arquivos compilados para o repositório `site-gabrielhando/ufsc-redacao/`
+3. 📤 Faz commit e push para o GitHub
+4. ✅ Aguarde alguns minutos para a Hostinger atualizar
+
+**Nota:** O comando `deploy` assume que o repositório `site-gabrielhando` está clonado em `../site-gabrielhando/`.
 
 ---
 
